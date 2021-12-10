@@ -2,6 +2,7 @@ node('jenkins-slave') {
     
      stage('test pipeline') {
         sh(script: """
+            sleep 1000
             echo "hello"
            git clone https://github.com/saigit1/docker-development-youtube-series.git
            cd ./docker-development-youtube-series/golang
