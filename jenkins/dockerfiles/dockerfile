@@ -7,8 +7,8 @@ RUN curl -sSL https://get.docker.com/ | sh
 
 ARG user=jenkins
 ARG group=jenkins
-ARG uid=0
-ARG gid=0
+ARG uid=1000
+ARG gid=1000
 
 ENV HOME /home/${user}
 RUN groupadd -g ${gid} ${group}
