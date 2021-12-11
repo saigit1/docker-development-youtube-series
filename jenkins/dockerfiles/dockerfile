@@ -5,10 +5,10 @@ RUN apt-get update -y && apt-get install -y curl sudo
 #Install docker
 RUN curl -sSL https://get.docker.com/ | sh
 
-ARG user=docker
-ARG group=docker
-ARG uid=1001
-ARG gid=999
+ARG user=jenkins
+ARG group=jenkins
+ARG uid=10000
+ARG gid=107
 
 ENV HOME /home/${user}
 RUN groupadd -g ${gid} ${group}
